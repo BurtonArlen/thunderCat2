@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.inboundrx.thundercat2.MainActivity"
-    android:background="@drawable/landing">
+    android:background="@color/colorAccent">
 
     <ImageView
         android:scaleType="centerCrop"
-        android:alpha="0"
+        android:alpha="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/byte_shift_black"
+        android:background="@drawable/byteshift_primary_silver"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
         android:id="@+id/landingLogo"
