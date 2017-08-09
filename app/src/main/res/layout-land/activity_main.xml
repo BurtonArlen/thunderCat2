@@ -24,12 +24,12 @@
 
     <Button
         android:alpha="0"
-        android:layout_width="wrap_content"
-        android:text="Learn More"
+        android:layout_width="150dp"
+        android:text="Sign In to Learn More"
         android:textAlignment="center"
         android:textSize="20dp"
         android:background="@drawable/ic_lightbulb_outline_white_48dp"
-        android:layout_height="wrap_content"
+        android:layout_height="140dp"
         android:layout_marginEnd="8dp"
         android:id="@+id/learnMoreButton"
         app:layout_constraintLeft_toRightOf="@+id/landingLogo"
