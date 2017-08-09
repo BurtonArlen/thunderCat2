@@ -115,7 +115,9 @@ public class SelectionActivity extends AppCompatActivity implements View.OnClick
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    //ToDo: update UI
+                    //ToDo: send Intent extras
+                    Intent intent = new Intent(SelectionActivity.this, ChosenActivity.class);
+                    startActivity(intent);
                 }
             }, 600);
         }
@@ -127,7 +129,9 @@ public class SelectionActivity extends AppCompatActivity implements View.OnClick
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    //ToDo: update UI
+                    //ToDo: send Intent extras
+                    Intent intent = new Intent(SelectionActivity.this, ChosenActivity.class);
+                    startActivity(intent);
                 }
             }, 600);
         }
@@ -139,7 +143,9 @@ public class SelectionActivity extends AppCompatActivity implements View.OnClick
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    //ToDo: update UI
+                    //ToDo: send Intent extras
+                    Intent intent = new Intent(SelectionActivity.this, ChosenActivity.class);
+                    startActivity(intent);
                 }
             }, 600);
         }
