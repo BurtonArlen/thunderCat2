@@ -30,7 +30,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener{
+public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener{
 
     private ProgressDialog mDialog;
     private FirebaseAuth mAuth;
@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     String TAG = MainActivity.class.getSimpleName();
 
-    @Bind(R.id.learnMoreButton) Button mLearnMoreButton;
     @Bind(R.id.landingLogo) ImageView mLandingLogo;
 
     @Override
@@ -47,7 +46,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        mLearnMoreButton.setOnClickListener(this);
         openAnimationLogo();
         createProgressDialog();
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -144,25 +142,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void openAnimationLogo(){
         mLandingLogo.animate().setDuration(2000).alpha(1f);
-        openAnimationButton();
-    }
-
-    private void openAnimationButton(){
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                mLearnMoreButton.animate().setDuration(2000).alpha(1f);
+                signIn();
             }
-        }, 2000);
+        }, 2500);
     }
 
-    @Override
-    public void onClick(View v){
-        if (v == mLearnMoreButton){
-            signIn();
-        }
-    }
     @Override
     protected void onPause(){
         super.onPause();
