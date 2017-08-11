@@ -5,8 +5,8 @@ package com.inboundrx.thundercat2.BeaconIds;
  */
 
 public class BeaconMinor {
-    public static final String beacon1 = "53700";
-    public static final String beacon2 = "32626";
-    public static final String beacon3 = "11960";
-    public static final String beacon4 = "25327";
+    public static final int beacon1 = 53700;
+    public static final int beacon2 = 32626;
+    public static final int beacon3 = 11960;
+    public static final int beacon4 = 25327;
 }
